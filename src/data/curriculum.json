@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "topics": [
+    { "id": "kitchen", "title": "Kitchen & Dining", "sequence": ["spoon", "fork", "bowl", "plate", "pan", "pot"] },
+    { "id": "animals", "title": "Animals", "sequence": ["cat", "dog", "duck", "cow", "pig", "chicken"] }
+  ],
+  "vocabulary": [
+    { "id": "spoon", "word": "Spoon", "meaningVi": "Cái thìa", "topicId": "kitchen", "image": "/images/spoon.png", "audio": "/audio/spoon.wav", "status": "ready" },
+    { "id": "fork", "word": "Fork", "meaningVi": "Cái nĩa", "topicId": "kitchen", "image": "/images/fork.png", "audio": "/audio/fork.wav", "status": "ready" },
+    { "id": "bowl", "word": "Bowl", "meaningVi": "Cái bát", "topicId": "kitchen", "image": "/images/bowl.png", "audio": "/audio/bowl.wav", "status": "ready" },
+    { "id": "plate", "word": "Plate", "meaningVi": "Cái đĩa", "topicId": "kitchen", "status": "planned" },
+    { "id": "pan", "word": "Pan", "meaningVi": "Cái chảo", "topicId": "kitchen", "status": "planned" },
+    { "id": "pot", "word": "Pot", "meaningVi": "Cái nồi", "topicId": "kitchen", "status": "planned" },
+    { "id": "cat", "word": "Cat", "meaningVi": "Con mèo", "topicId": "animals", "status": "planned" },
+    { "id": "dog", "word": "Dog", "meaningVi": "Con chó", "topicId": "animals", "status": "planned" },
+    { "id": "duck", "word": "Duck", "meaningVi": "Con vịt", "topicId": "animals", "status": "planned" },
+    { "id": "cow", "word": "Cow", "meaningVi": "Con bò", "topicId": "animals", "status": "planned" },
+    { "id": "pig", "word": "Pig", "meaningVi": "Con heo", "topicId": "animals", "status": "planned" },
+    { "id": "chicken", "word": "Chicken", "meaningVi": "Con gà", "topicId": "animals", "status": "planned" }
+  ],
+  "adventure": {
+    "id": "kitchen-first-words", "revision": 1, "title": "A little kitchen adventure",
+    "topicId": "kitchen", "wordIds": ["spoon", "fork", "bowl"],
+    "stickerId": "little-chef", "stickerName": "Little Chef",
+    "objective": "Recognize familiar kitchen objects from their English names."
+  }
+}
