@@ -51,6 +51,12 @@ describe('guided adventure', () => {
     s = sessionReducer(s, { type: 'continue' });
     expect(choices(s)).toHaveLength(2);
   });
+  it('keeps the same pictures in place during correct feedback', () => {
+    const before = quiz();
+    const after = sessionReducer(before, { type: 'answer', id: 'spoon' });
+    expect(choices(after).map(w => w.id)).toEqual(choices(before).map(w => w.id));
+    expect(choices(sessionReducer(after, { type: 'continue' }))).toHaveLength(3);
+  });
   it('awards the same sticker for all-assisted completion and never duplicates it on replay', () => {
     const s = finish(quiz(), true);
     expect(s.phase).toBe('sticker');

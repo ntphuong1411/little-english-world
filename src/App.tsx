@@ -128,7 +128,7 @@ export default function App() {
   return <div className="app-shell">
     <header className="header">
       <button className="brand" onClick={() => { if (!session) home(); else setParents(true); }} aria-label="Little English World home"><span className="brand-flower" aria-hidden="true">✿</span><span>little english<strong>world<span className="brand-dot">.</span></strong></span></button>
-      <nav aria-label="Main navigation"><button className={`nav-stickers ${shelf ? 'active' : ''}`} onClick={() => { if (session) setParents(true); else setShelf(!shelf); }}><Icon name="star" size={19} /><span>My stickers</span><span className="badge">{progress.stickers.length}</span></button><button className="parent-link" onClick={() => { stopAudio(); setParents(true); }}><Icon name="lock" size={17} /><span>Parents</span></button></nav>
+      <nav aria-label="Main navigation"><button aria-label={`My stickers, ${progress.stickers.length} collected`} className={`nav-stickers ${shelf ? 'active' : ''}`} onClick={() => { if (session) setParents(true); else setShelf(!shelf); }}><Icon name="star" size={19} /><span>My stickers</span><span className="badge">{progress.stickers.length}</span></button><button aria-label="Parents" className="parent-link" onClick={() => { stopAudio(); setParents(true); }}><Icon name="lock" size={17} /><span>Parents</span></button></nav>
     </header>
     <main>
       {!session && !shelf && <>

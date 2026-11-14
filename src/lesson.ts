@@ -57,7 +57,9 @@ export function sessionReducer(s: Session, a: Action): Session {
 
 export function choices(s: Session): Word[] {
   const target = s.words[s.index];
-  const count = s.independent > 0 && s.words.length >= 3 ? 3 : 2;
+  // The current result must not change the picture layout before Continue.
+  const priorIndependent = s.independent - (s.result === 'correct' && s.answers[target.id] === 'independent' ? 1 : 0);
+  const count = priorIndependent > 0 && s.words.length >= 3 ? 3 : 2;
   const others = s.words.filter((w) => w.id !== target.id).slice(0, count - 1);
   const pool = [target, ...others];
   // Rotate positions independently of correctness; keep choices stable after mistakes.
