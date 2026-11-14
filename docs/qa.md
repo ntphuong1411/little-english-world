@@ -1,7 +1,7 @@
 # Stage 1 QA — 2026-11-14
 
 ## Verified locally
-- `npm test`: 11 tests passed. Covers answer gating, two-error assistance, progressive choice count, two-word constraint, reward regardless of accuracy, sticker deduplication, duplicate answer suppression and malformed progress recovery.
+- `npm test`: 12 tests passed after browser-QA fixes. Covers answer gating, two-error assistance, progressive choice count, stable feedback layout, two-word constraint, reward regardless of accuracy, sticker deduplication, duplicate answer suppression and malformed progress recovery.
 - `npm run check:content`: 12 vocabulary records; 3 playable words. Static assets referenced by the playable slice exist; WAV headers checked.
 - `npm run build`: TypeScript and Vite build succeeded after deployment-base changes. Scoped service worker generated with 25 precached files plus the app base route.
 - Generated images inspected: Spoon, Fork, Bowl and Little Bunny.
@@ -33,4 +33,11 @@ Work's browser timed out connecting to Windows localhost. Windows Computer Use t
 - Generated static voice is development audio, pending human listening/rights review.
 - Current PNG/WAV assets total several MB; first cache setup requires a good connection and available browser storage.
 - Parent arithmetic gate is convenience only, not authentication.
-- Final correction deployment and smoke-check results will be added after observation.
+
+## Final deployment
+- Commit `25ede2e5ef3ea6853877224eb8c4fb68303ac01b`; GitHub Actions run `43552051984`: completed successfully (2026-11-14).
+- URL: https://ntphuong1411.github.io/little-english-world/
+- Direct HTTPS response: HTTP 200. Published HTML references `index-DBywRzXK.js`; published service worker available under the application base.
+- Both correction tests and all build/content/path checks passed before publishing; GitHub's build job also passed.
+- Existing Work browser session continued showing the previous cached module (`index-Cnqi4qrk.js`) during update checks. Do not claim the two final corrections were browser-verified on the fresh revision. PWA update UX needs follow-up; server publication is independently verified.
+- No actual offline-network cut or audible listening test was performed. Those remain open.

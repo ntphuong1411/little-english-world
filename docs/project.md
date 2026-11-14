@@ -22,11 +22,14 @@ Mobile-first, parent-guided English vocabulary adventure for the family's two-ye
 
 ## Prioritized backlog
 P0: finish hosted browser QA and mobile QA; verify static audio by listening; verify offline reload and install on target devices.
-P0: finish deployment and record actual URL/commit/status, not just a successful push.
+P0: verify PWA update behavior in a fresh browser and improve update feedback; the existing Work session retained the older cached module after deployment.
 P1: review image/audio quality and redistribution rights before broader release; optimize media payload.
 P1: add Plate/Pan/Pot with reviewed assets, enable 5-word sessions, implement next-group sequencing and parent lesson selection.
 P1: implement curated review of previously encountered words without equating completion with mastery.
 P2: Animals content and existing name/sound distinction; accessibility audit and wider device coverage.
+
+## Deployment completed
+2026-11-14: owner-authorized GitHub Pages demo deployed successfully at https://ntphuong1411.github.io/little-english-world/ (application commit `25ede2e`, workflow run `43552051984`). Direct HTTP 200 verified. Initial hosted mobile lesson, assistance, reward and reload persistence were observed; see QA limitations for the final cached-browser update check.
 
 ## Release gate
 - Owner approval of exact revision and publish destination.
